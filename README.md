@@ -1,6 +1,6 @@
-Support CRM System
+##Support CRM System
 
-Tech Stack
+##Tech Stack
 
 * FastAPI
 * SQLite
@@ -9,7 +9,7 @@ Tech Stack
 * HTML/CSS
 * Bootstrap
 
-Features
+##Features
 
 * Create Tickets
 * View All Tickets
@@ -19,22 +19,22 @@ Features
 * Edit Tickets
 * Update Ticket Status (Open, In Progress, Closed)
 
-Local Setup Instructions
+##Local Setup Instructions
 
-1. Clone the Repository
+##1. Clone the Repository
 
 git clone https://github.com/taha433nomani/support-crm.git
 
-2. Open Project in VS Code
+##2. Open Project in VS Code
 
 cd support-crm
 code .
 
-3. Create Virtual Environment
+##3. Create Virtual Environment
 
 python -m venv venv
 
-4. Activate Virtual Environment
+##4. Activate Virtual Environment
 
 Windows
 
@@ -44,21 +44,21 @@ Mac/Linux
 
 source venv/bin/activate
 
-5. Install Dependencies
+##5. Install Dependencies
 
 pip install -r requirements.txt
 
-6. Run the Application
+##6. Run the Application
 
 uvicorn main:app --reload
 
-7. Open in Browser
+##7. Open in Browser
 
 http://127.0.0.1:8000
 
 The application will now be running locally.
 
-Project Structure
+##Project Structure
 
 support-crm/
 │
@@ -70,7 +70,7 @@ support-crm/
 │
 └── templates/
 
-Deployment
+##Deployment
 
 The application is deployed on Render.
 ## Live Demo
