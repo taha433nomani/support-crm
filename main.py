@@ -8,6 +8,7 @@ from models import Ticket
 
 app = FastAPI()
 
+
 # Create database tables
 Base.metadata.create_all(bind=engine)
 
@@ -357,6 +358,46 @@ def update_ticket(
         ticket.subject = subject
         ticket.description = description
 
+        db.commit()
+
+    db.close()
+
+    return RedirectResponse(
+        url="/",
+        status_code=303
+    )
+@app.post("/close-ticket/{ticket_id}")
+def close_ticket(ticket_id: int):
+
+    db = SessionLocal()
+
+    ticket = db.query(Ticket).filter(
+        Ticket.ticket_id == ticket_id
+    ).first()
+
+    if ticket:
+        ticket.status = "Closed"
+        db.commit()
+
+    db.close()
+
+    return RedirectResponse(
+        url="/",
+        status_code=303
+    )
+
+
+@app.post("/progress-ticket/{ticket_id}")
+def progress_ticket(ticket_id: int):
+
+    db = SessionLocal()
+
+    ticket = db.query(Ticket).filter(
+        Ticket.ticket_id == ticket_id
+    ).first()
+
+    if ticket:
+        ticket.status = "In Progress"
         db.commit()
 
     db.close()
