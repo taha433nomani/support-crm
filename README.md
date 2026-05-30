@@ -66,9 +66,10 @@ support-crm/
 ├── models.py
 ├── database.py
 ├── requirements.txt
-├── support_crm.db
+├── .gitignore
 │
-└── templates/
+├── templates/
+└── static/
 
 ## Deployment
 
